@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+/*
+  Structure and Sky Studios: "umber and brass".
+  Warm black, bone paper and a single metal. The renders carry all the colour.
+*/
+:root {
+  --umber: #12100d;
+  --umber-2: #1a1713;
+  --umber-3: #26211b;
+  --bone: #efe9de;
+  --paper: #f7f3ec;
+  --brass: #b8924e;
+  --brass-hi: #d3b176;
+  --brass-ink: #7a5a25; /* brass for text on bone: 5.9:1 */
+  --text-dark: #1c1814;
+  --stone: #a39b8c; /* secondary text on umber: 6.9:1 */
+  --stone-ink: #5f584c; /* secondary text on bone: 6.3:1 */
+  --line-dark: rgba(239, 233, 222, 0.16);
+  --line-light: rgba(28, 24, 20, 0.16);
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --header-h: 6rem;
+}
+
+@theme inline {
+  --color-umber: var(--umber);
+  --color-umber-2: var(--umber-2);
+  --color-umber-3: var(--umber-3);
+  --color-bone: var(--bone);
+  --color-paper: var(--paper);
+  --color-brass: var(--brass);
+  --color-brass-hi: var(--brass-hi);
+  --color-brass-ink: var(--brass-ink);
+  --color-stone: var(--stone);
+  --color-stone-ink: var(--stone-ink);
+  --color-ink: var(--text-dark);
+  --font-sans: var(--font-hanken), system-ui, sans-serif;
+  --font-serif: var(--font-instrument), Georgia, serif;
+}
+
+html {
+  background: var(--umber);
+  color: var(--bone);
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection {
+  background: var(--brass);
+  color: var(--umber);
+}
+:focus-visible {
+  outline: 2px solid var(--brass-hi);
+  outline-offset: 3px;
+}
+
+@layer components {
+  /* ---- Type scale: 1.333 ratio on a 17px base, serif for voice, sans for work ---- */
+  .t-display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 0.94;
+    font-size: clamp(3.4rem, 9.4vw, 9.5rem);
+  }
+  .t-h1 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+    font-size: clamp(2.8rem, 6.6vw, 6.4rem);
+  }
+  .t-h2 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+    font-size: clamp(2.2rem, 4.6vw, 4.4rem);
+  }
+  .t-h3 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+    font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+  }
+  .t-lede {
+    font-weight: 300;
+    font-size: clamp(1.1rem, 1.35vw, 1.3rem);
+    line-height: 1.6;
+    max-width: 46ch;
+  }
+  .t-small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  .italic-serif {
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 1680px;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4.2vw, 5rem);
+  }
+  .section {
+    padding-block: clamp(5rem, 11vw, 11rem);
+  }
+
+  /* surfaces */
+  .on-umber {
+    background: var(--umber);
+    color: var(--bone);
+  }
+  .on-umber-2 {
+    background: var(--umber-2);
+    color: var(--bone);
+  }
+  .on-bone {
+    background: var(--bone);
+    color: var(--text-dark);
+  }
+  .on-bone .muted {
+    color: var(--stone-ink);
+  }
+  .on-umber .muted,
+  .on-umber-2 .muted {
+    color: var(--stone);
+  }
+  .hair-top {
+    border-top: 1px solid var(--line-dark);
+  }
+  .on-bone .hair-top,
+  .on-bone.hair-top {
+    border-top-color: var(--line-light);
+  }
+
+  /* ---- Buttons ---- */
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 3.5rem;
+    padding: 0.9rem 2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    border: 1px solid currentColor;
+    overflow: hidden;
+    isolation: isolate;
+    transition: color 320ms var(--ease), border-color 320ms var(--ease), transform 120ms ease-out;
+    cursor: pointer;
+  }
+  .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--brass);
+    transform: translateY(101%);
+    transition: transform 420ms var(--ease);
+  }
+  .btn:hover::before,
+  .btn:focus-visible::before {
+    transform: none;
+  }
+  .btn:hover {
+    color: var(--umber);
+    border-color: var(--brass);
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+  .btn-solid {
+    background: var(--brass);
+    color: var(--umber);
+    border-color: var(--brass);
+  }
+  .btn-solid::before {
+    background: var(--bone);
+  }
+  .btn-solid:hover {
+    border-color: var(--bone);
+  }
+  .on-bone .btn-solid {
+    background: var(--umber);
+    color: var(--bone);
+    border-color: var(--umber);
+  }
+  .on-bone .btn-solid::before {
+    background: var(--brass);
+  }
+  .on-bone .btn-solid:hover {
+    color: var(--umber);
+    border-color: var(--brass);
+  }
+
+  .link-u {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+    transition: background-size 400ms var(--ease), color 200ms;
+    padding-bottom: 2px;
+  }
+  .link-u:hover {
+    background-size: 0 1px;
+    background-position: 100% 100%;
+  }
+
+  /* ---- Forms ---- */
+  .field {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--line-dark);
+    color: inherit;
+    padding: 0.9rem 0;
+    min-height: 3.25rem;
+    font: inherit;
+    transition: border-color 200ms;
+  }
+  .on-bone .field {
+    border-bottom-color: var(--line-light);
+  }
+  .field::placeholder {
+    color: var(--stone);
+    opacity: 0.7;
+  }
+  .field:hover {
+    border-bottom-color: var(--stone);
+  }
+  .field:focus {
+    border-bottom-color: var(--brass);
+    outline: none;
+  }
+  select.field option {
+    color: #1c1814;
+  }
+  .label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.1rem;
+    color: var(--stone);
+  }
+  .on-bone .label {
+    color: var(--stone-ink);
+  }
+  .hint {
+    font-size: 0.8rem;
+    color: var(--stone);
+  }
+
+  /* Placeholder marking: anything not yet real must look unfinished */
+  .placeholder {
+    border: 1px dashed var(--brass);
+    background: repeating-linear-gradient(135deg, transparent 0 14px, rgba(184, 146, 78, 0.07) 14px 15px);
+  }
+}
+
+/* Header ink follows the surface beneath it (set by the hero) */
+.nav-link {
+  color: rgba(239, 233, 222, 0.88);
+}
+.nav-cta {
+  color: var(--bone);
+}
+html[data-hdr="ink"] .hdr:not(.is-solid) .logo-ivory {
+  display: none;
+}
+html[data-hdr="ink"] .hdr:not(.is-solid) .logo-ink {
+  display: block;
+}
+html[data-nav="ink"] .hdr:not(.is-solid) .nav-link,
+html[data-nav="ink"] .hdr:not(.is-solid) .nav-cta {
+  color: var(--text-dark);
+}
+html[data-hdr="ink"] .hdr:not(.is-solid) button span span {
+  background: var(--text-dark);
+}
+
+/* Drafting grid used behind the plan stage */
+.drafting-grid {
+  background-image: linear-gradient(rgba(28, 24, 20, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 24, 20, 0.07) 1px, transparent 1px);
+  background-size: 6.25vw 6.25vw;
+}
+
+/* Page-load: one orchestrated lift */
+@keyframes lift {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.lift {
+  opacity: 0;
+  animation: lift 1.1s var(--ease) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift {
+    animation: none;
+    opacity: 1;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
