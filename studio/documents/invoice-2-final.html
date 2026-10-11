@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Invoice 2 of 2 (Final) | Structure and Sky Studios</title>
+<link rel="stylesheet" href="assets/brand.css">
+<style>
+@page{size:Letter;margin:0}
+.page{width:8.5in;height:11in;padding:0}
+.band{background:var(--umber);color:var(--bone);padding:11mm 20mm 9mm;display:flex;justify-content:space-between;align-items:flex-start}
+.band img{height:15mm}
+.band .doc{text-align:right}
+.band .doc .eyebrow{color:var(--brass-hi);margin-bottom:2mm}
+.band .doc h1{font-size:32pt;color:var(--bone);letter-spacing:-.03em}
+.body{padding:9mm 20mm 0}
+.facts{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:8mm}
+.lbl{font-size:7.2pt;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-ink);margin-bottom:1mm}
+.facts .v{font-size:10pt;line-height:1.45}
+td.ph{display:table-cell;background:none}
+table.items{margin-top:9mm}
+table.items td{padding:4mm 0 6mm}
+.tax{display:flex;justify-content:flex-end;gap:10mm;font-size:8.6pt;color:var(--stone-ink);margin-top:2mm}
+.total{display:flex;justify-content:flex-end;align-items:baseline;gap:10mm;margin-top:4mm;padding-top:4mm;border-top:1px solid var(--ink)}
+.total .t{font-size:7.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-ink)}
+.total b{font-family:"Instrument Serif",serif;font-weight:400;font-size:26pt}
+.pay{position:absolute;left:20mm;right:20mm;bottom:42mm;display:grid;grid-template-columns:1.1fr 1fr;gap:10mm;font-size:8.8pt}
+.pay dl{display:grid;grid-template-columns:28mm 1fr;gap:1.2mm 4mm}
+.pay dt{color:var(--stone-ink);font-size:7.2pt;letter-spacing:.14em;text-transform:uppercase;padding-top:.6mm}
+.pay dd{margin:0}
+.notes{font-size:8pt;color:var(--stone-ink);line-height:1.5}
+.notes p{max-width:none;margin-bottom:1.6mm}
+.thanks{position:absolute;right:20mm;bottom:27mm;font-family:"Instrument Serif",serif;font-style:italic;font-size:24pt;color:var(--brass-ink)}
+.band-foot{position:absolute;left:0;right:0;bottom:0;background:var(--umber);color:var(--stone);padding:6mm 20mm;display:flex;justify-content:space-between;font-size:7.4pt;letter-spacing:.06em}
+.band-foot b{font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bone)}
+.band-foot .ph{color:var(--brass-hi);background:none;padding:0}
+</style></head><body>
+
+<section class="page">
+  <div class="band">
+    <img src="assets/lockup-horizontal-ivory.svg" alt="Structure and Sky Studios">
+    <div class="doc"><div class="eyebrow">Invoice 2 of 2 · Final</div><h1>Invoice</h1><span class="ph" style="color:var(--brass-hi);background:none;padding:0;font-size:9pt">[SSS-MMDDYYYY-02]</span></div>
+  </div>
+
+  <div class="body">
+    <div class="facts">
+      <div><div class="lbl">For</div><div class="v"><span class="ph">[Client name]</span></div></div>
+      <div><div class="lbl">Project</div><div class="v"><span class="ph">[Project name]</span><br><span class="ph">[Project address]</span></div></div>
+      <div><div class="lbl">Date</div><div class="v"><span class="ph">[MM/DD/YYYY]</span><br><span class="ph">[Tax / registration no.]</span></div></div>
+    </div>
+
+    <table class="items">
+      <tr><th>Item</th><th class="r" style="width:42mm">Total (USD)</th></tr>
+      <tr><td><b style="font-weight:500">Final payment, 50%</b> <span class="muted">· <span class="ph">[package / services]</span></span><br><span class="muted" style="font-size:8.4pt">Due before delivery of the final files</span></td><td class="r"><span class="ph">[$0,000.00]</span></td></tr>
+    </table>
+    <div class="tax"><span>Tax <span class="ph">[rate]</span></span><span class="ph">[$0.00]</span></div>
+    <div class="total"><span class="t">Total due, USD</span><b class="ph">[$0,000.00]</b></div>
+
+    <div class="pay">
+      <div>
+        <div class="lbl">How to pay (USD)</div>
+        <dl>
+          <dt>Method</dt><dd><span class="ph">[Bank transfer / ACH / wire / other]</span></dd>
+          <dt>Account name</dt><dd><span class="ph">[Account holder]</span></dd>
+          <dt>Bank</dt><dd><span class="ph">[Bank name]</span></dd>
+          <dt>Account / routing</dt><dd><span class="ph">[Account no. / routing no.]</span></dd>
+          <dt>Reference</dt><dd><span class="ph">[SSS-MMDDYYYY-02]</span></dd>
+        </dl>
+      </div>
+      <div class="notes">
+        <div class="lbl">Notes</div>
+        <p>All amounts are in United States dollars (USD). Use the invoice number as the payment reference.</p>
+        <p>Final files are released only after payment in full, and late amounts bear interest as set out in the terms of the signed proposal.</p>
+        <p>Questions about this invoice: <span class="ph">[email]</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="thanks">thank you.</div>
+  <div class="band-foot"><b>Structure and Sky Studios</b><span><span class="ph">[email]</span> · <span class="ph">[phone]</span> · <span class="ph">[website]</span></span></div>
+</section>
+</body></html>

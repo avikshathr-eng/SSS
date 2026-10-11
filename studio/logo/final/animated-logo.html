@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Structure and Sky Studios - Animated Logo</title>
+<style>
+:root{--bg:#0E1824;--fg:#F2EBDD;--accent:#C8A064;--muted:#8d97a3}
+:root[data-theme="light"]{--bg:#F4EEE3;--fg:#0E1824;--accent:#A87C3E;--muted:#6b6f75}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:background .5s,color .5s}
+#stage{width:min(62vmin,520px);cursor:pointer;touch-action:manipulation}
+svg{width:100%;height:auto;display:block;overflow:visible}
+.fg{fill:var(--fg)}.accent{fill:var(--accent)}.line{fill:none;stroke:var(--fg);stroke-linejoin:miter}
+#wm{text-align:center;margin-top:2.2vmin;opacity:0;user-select:none}
+#wm svg{width:min(62vmin,430px);height:auto;display:block;margin:0 auto}
+#ui{position:fixed;bottom:18px;display:flex;gap:10px}
+button{background:none;color:var(--muted);border:1px solid color-mix(in srgb,var(--muted) 50%,transparent);padding:7px 14px;border-radius:99px;font:inherit;font-size:12px;letter-spacing:.08em;cursor:pointer}
+button:hover{color:var(--fg);border-color:var(--fg)}
+</style></head><body>
+<div id="stage" title="Click to replay. Hover to speed up the drone.">
+<svg viewBox="0 0 256 256" role="img" aria-label="Structure and Sky Studios logo">
+ <defs><mask id="bm" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256"><rect width="256" height="256" fill="#fff"/><g id="mk" stroke="#000" stroke-linecap="round" fill="none"></g></mask></defs>
+ <g id="back" stroke="var(--fg)" stroke-linecap="round" fill="none"><circle id="db" class="accent" r="6" stroke="none"/></g>
+ <g mask="url(#bm)"><path id="wl" class="line" pathLength="1" stroke-width="2.2"/><path id="wr" class="line" pathLength="1" stroke-width="2.2"/><g id="fl" class="fg"></g></g>
+ <path id="lid" class="line" pathLength="1" stroke-width="2.5"/>
+ <g id="front" stroke="var(--fg)" stroke-linecap="round" fill="none"><circle id="df" class="accent" r="6" stroke="none"/></g>
+</svg></div>
+<div id="wm"><svg viewBox="0 -2 520 94" aria-label="Structure and Sky Studios"><path d="M15.05 34.57Q11.02 34.57 7.32 33.49Q3.61 32.41 1.35 30.70L3.99 24.81Q6.13 26.35 9.10 27.34Q12.07 28.32 15.09 28.32Q17.42 28.32 18.83 27.86Q20.25 27.40 20.91 26.58Q21.58 25.77 21.58 24.73Q21.58 23.38 20.51 22.58Q19.44 21.77 17.71 21.27Q15.98 20.76 13.90 20.31Q11.81 19.86 9.71 19.20Q7.62 18.54 5.89 17.48Q4.16 16.42 3.09 14.67Q2.02 12.93 2.02 10.24Q2.02 7.38 3.57 5.01Q5.13 2.64 8.28 1.22Q11.43 -0.20 16.21 -0.20Q19.36 -0.20 22.44 0.55Q25.53 1.30 27.88 2.76L25.46 8.65Q23.13 7.32 20.76 6.68Q18.38 6.04 16.14 6.04Q13.87 6.04 12.45 6.56Q11.02 7.08 10.38 7.94Q9.74 8.79 9.74 9.86Q9.74 11.19 10.81 11.99Q11.87 12.78 13.61 13.26Q15.34 13.74 17.43 14.20Q19.53 14.66 21.61 15.30Q23.70 15.95 25.43 16.99Q27.16 18.04 28.23 19.78Q29.29 21.51 29.29 24.15Q29.29 26.97 27.73 29.34Q26.16 31.70 23.01 33.13Q19.85 34.57 15.05 34.57ZM46.41 34.00V6.72H35.66V0.36H64.96V6.72H54.21V34.00ZM73.95 34.00V0.36H88.30Q95.35 0.36 99.24 3.61Q103.13 6.87 103.13 12.56Q103.13 16.30 101.36 19.01Q99.58 21.72 96.31 23.17Q93.03 24.61 88.50 24.61H78.28L81.76 21.23V34.00ZM95.36 34.00 86.92 21.78H95.26L103.76 34.00ZM81.76 22.07 78.28 18.41H88.09Q91.67 18.41 93.46 16.86Q95.26 15.31 95.26 12.56Q95.26 9.77 93.46 8.24Q91.67 6.70 88.09 6.70H78.28L81.76 3.01ZM129.02 34.57Q121.86 34.57 117.83 30.59Q113.79 26.61 113.79 19.18V0.36H121.59V18.93Q121.59 23.70 123.57 25.84Q125.54 27.97 129.08 27.97Q132.65 27.97 134.61 25.84Q136.58 23.70 136.58 18.93V0.36H144.24V19.18Q144.24 26.61 140.21 30.59Q136.17 34.57 129.02 34.57ZM172.87 34.57Q168.95 34.57 165.62 33.29Q162.28 32.02 159.83 29.68Q157.38 27.34 156.02 24.16Q154.65 20.99 154.65 17.18Q154.65 13.38 156.02 10.20Q157.38 7.02 159.85 4.68Q162.31 2.34 165.65 1.07Q168.98 -0.20 172.90 -0.20Q177.27 -0.20 180.82 1.31Q184.36 2.82 186.74 5.74L181.76 10.36Q180.04 8.40 177.92 7.40Q175.79 6.39 173.27 6.39Q170.92 6.39 168.95 7.17Q166.99 7.95 165.55 9.39Q164.11 10.83 163.32 12.81Q162.52 14.79 162.52 17.18Q162.52 19.57 163.32 21.55Q164.11 23.53 165.55 24.97Q166.99 26.41 168.95 27.19Q170.92 27.97 173.27 27.97Q175.79 27.97 177.92 26.96Q180.04 25.96 181.76 23.97L186.74 28.59Q184.36 31.49 180.82 33.03Q177.27 34.57 172.87 34.57ZM203.31 34.00V6.72H192.56V0.36H221.86V6.72H211.11V34.00ZM245.79 34.57Q238.63 34.57 234.60 30.59Q230.56 26.61 230.56 19.18V0.36H238.37V18.93Q238.37 23.70 240.34 25.84Q242.31 27.97 245.86 27.97Q249.42 27.97 251.38 25.84Q253.35 23.70 253.35 18.93V0.36H261.02V19.18Q261.02 26.61 256.98 30.59Q252.95 34.57 245.79 34.57ZM273.52 34.00V0.36H287.88Q294.92 0.36 298.81 3.61Q302.70 6.87 302.70 12.56Q302.70 16.30 300.93 19.01Q299.15 21.72 295.88 23.17Q292.60 24.61 288.07 24.61H277.85L281.33 21.23V34.00ZM294.94 34.00 286.50 21.78H294.83L303.33 34.00ZM281.33 22.07 277.85 18.41H287.66Q291.24 18.41 293.03 16.86Q294.83 15.31 294.83 12.56Q294.83 9.77 293.03 8.24Q291.24 6.70 287.66 6.70H277.85L281.33 3.01ZM313.65 34.00V0.36H339.05V6.62H321.38V27.74H339.70V34.00ZM320.81 19.95V13.90H337.02V19.95ZM398.18 34.50 379.82 15.16Q378.14 13.37 377.19 12.04Q376.24 10.71 375.87 9.52Q375.50 8.34 375.50 7.06Q375.50 4.97 376.48 3.43Q377.45 1.88 379.26 1.02Q381.06 0.15 383.48 0.15Q385.74 0.15 387.39 0.92Q389.03 1.69 389.96 3.12Q390.88 4.56 390.88 6.56Q390.88 8.34 390.03 9.84Q389.18 11.35 387.21 12.87Q385.24 14.39 381.86 16.32Q378.66 18.16 376.83 19.65Q375.00 21.14 374.27 22.55Q373.53 23.96 373.53 25.62Q373.53 27.59 374.63 29.09Q375.72 30.59 377.69 31.41Q379.65 32.22 382.23 32.22Q385.69 32.22 388.38 30.80Q391.07 29.39 392.89 26.51Q394.71 23.64 395.54 19.26L397.51 19.86Q396.58 24.65 394.47 27.84Q392.35 31.04 389.23 32.64Q386.10 34.24 382.12 34.24Q378.94 34.24 376.47 33.18Q373.99 32.11 372.58 30.23Q371.16 28.35 371.16 25.81Q371.16 23.78 372.08 22.03Q373.00 20.27 375.08 18.52Q377.17 16.76 380.67 14.78Q383.78 13.00 385.54 11.70Q387.30 10.41 388.04 9.21Q388.78 8.02 388.78 6.59Q388.78 4.54 387.41 3.29Q386.04 2.04 383.48 2.04Q380.77 2.04 379.26 3.42Q377.76 4.80 377.76 7.03Q377.76 8.08 378.09 9.05Q378.41 10.02 379.30 11.21Q380.19 12.39 381.79 14.12L399.64 32.91ZM436.82 34.24Q433.09 34.24 429.74 32.96Q426.39 31.68 424.58 29.69L425.68 27.83Q427.40 29.63 430.39 30.85Q433.39 32.08 436.79 32.08Q440.15 32.08 442.28 31.20Q444.41 30.32 445.44 28.82Q446.46 27.32 446.46 25.49Q446.46 23.35 445.32 22.04Q444.19 20.74 442.31 19.98Q440.44 19.22 438.21 18.69Q435.98 18.16 433.74 17.56Q431.50 16.96 429.63 15.99Q427.75 15.02 426.61 13.36Q425.48 11.70 425.48 9.04Q425.48 6.67 426.73 4.65Q427.99 2.62 430.62 1.37Q433.25 0.12 437.38 0.12Q440.17 0.12 442.89 0.94Q445.61 1.76 447.55 3.16L446.60 5.14Q444.52 3.68 442.09 2.98Q439.65 2.28 437.39 2.28Q434.16 2.28 432.04 3.20Q429.93 4.11 428.93 5.62Q427.93 7.12 427.93 9.00Q427.93 11.17 429.06 12.48Q430.20 13.78 432.08 14.54Q433.95 15.29 436.19 15.83Q438.44 16.36 440.66 16.97Q442.89 17.58 444.76 18.54Q446.64 19.50 447.77 21.13Q448.91 22.76 448.91 25.37Q448.91 27.72 447.63 29.75Q446.35 31.77 443.67 33.01Q440.98 34.24 436.82 34.24ZM464.18 25.49 464.08 22.40 485.51 0.36H488.46L473.50 15.90L472.09 17.39ZM462.05 34.00V0.36H464.51V34.00ZM486.49 34.00 471.37 16.70 473.07 14.92 489.50 34.00ZM508.55 34.00V21.79L509.12 23.40L495.00 0.36H497.69L510.52 21.27H509.17L522.02 0.36H524.57L510.44 23.40L511.01 21.79V34.00Z" style="fill:var(--fg)"/><path d="M116.80 86.14Q115.05 86.14 113.48 85.57Q111.91 85.00 111.03 84.12L111.68 82.86Q112.51 83.66 113.88 84.20Q115.26 84.74 116.79 84.74Q118.24 84.74 119.16 84.38Q120.07 84.02 120.51 83.39Q120.95 82.77 120.95 82.01Q120.95 81.11 120.43 80.56Q119.91 80.01 119.06 79.68Q118.22 79.36 117.20 79.12Q116.19 78.89 115.17 78.60Q114.15 78.32 113.31 77.86Q112.46 77.41 111.94 76.64Q111.42 75.87 111.42 74.64Q111.42 73.50 112.03 72.53Q112.63 71.57 113.89 70.98Q115.15 70.38 117.11 70.38Q118.42 70.38 119.71 70.75Q121.00 71.12 121.92 71.77L121.35 73.07Q120.38 72.41 119.26 72.09Q118.15 71.78 117.11 71.78Q115.71 71.78 114.80 72.16Q113.88 72.54 113.46 73.17Q113.03 73.80 113.03 74.59Q113.03 75.50 113.55 76.05Q114.07 76.60 114.91 76.92Q115.76 77.23 116.78 77.48Q117.80 77.72 118.81 78.00Q119.82 78.28 120.67 78.73Q121.52 79.18 122.04 79.94Q122.55 80.70 122.55 81.91Q122.55 83.04 121.94 84.01Q121.32 84.97 120.05 85.56Q118.77 86.14 116.80 86.14ZM162.32 86.00V71.95H156.87V70.53H169.39V71.95H163.94V86.00ZM211.41 86.14Q208.45 86.14 206.75 84.43Q205.06 82.72 205.06 79.39V70.53H206.67V79.33Q206.67 82.07 207.92 83.38Q209.16 84.68 211.42 84.68Q213.69 84.68 214.93 83.38Q216.17 82.07 216.17 79.33V70.53H217.77V79.39Q217.77 82.72 216.07 84.43Q214.38 86.14 211.41 86.14ZM255.88 86.00V70.53H262.18Q264.66 70.53 266.53 71.51Q268.39 72.50 269.43 74.24Q270.47 75.98 270.47 78.26Q270.47 80.55 269.43 82.29Q268.39 84.03 266.53 85.01Q264.66 86.00 262.18 86.00ZM257.50 84.58H262.09Q264.15 84.58 265.67 83.77Q267.18 82.96 268.01 81.54Q268.84 80.12 268.84 78.26Q268.84 76.39 268.01 74.98Q267.18 73.56 265.67 72.75Q264.15 71.95 262.09 71.95H257.50ZM307.33 86.00V70.53H308.95V86.00ZM353.95 86.14Q352.20 86.14 350.71 85.55Q349.22 84.96 348.13 83.89Q347.03 82.82 346.42 81.39Q345.81 79.96 345.81 78.26Q345.81 76.56 346.42 75.13Q347.03 73.70 348.13 72.63Q349.23 71.57 350.71 70.98Q352.20 70.38 353.95 70.38Q355.70 70.38 357.18 70.97Q358.66 71.56 359.76 72.63Q360.85 73.69 361.46 75.13Q362.07 76.56 362.07 78.26Q362.07 79.97 361.46 81.40Q360.85 82.84 359.76 83.90Q358.66 84.97 357.18 85.55Q355.70 86.14 353.95 86.14ZM353.95 84.68Q355.34 84.68 356.52 84.20Q357.71 83.72 358.58 82.85Q359.46 81.98 359.95 80.81Q360.44 79.65 360.44 78.26Q360.44 76.87 359.95 75.71Q359.46 74.55 358.59 73.68Q357.71 72.80 356.52 72.32Q355.34 71.84 353.95 71.84Q352.56 71.84 351.37 72.32Q350.18 72.80 349.30 73.68Q348.42 74.55 347.93 75.71Q347.44 76.88 347.44 78.26Q347.44 79.64 347.93 80.81Q348.42 81.97 349.30 82.85Q350.18 83.73 351.37 84.20Q352.56 84.68 353.95 84.68ZM403.20 86.14Q401.46 86.14 399.88 85.57Q398.31 85.00 397.44 84.12L398.08 82.86Q398.91 83.66 400.29 84.20Q401.66 84.74 403.19 84.74Q404.65 84.74 405.56 84.38Q406.48 84.02 406.91 83.39Q407.35 82.77 407.35 82.01Q407.35 81.11 406.83 80.56Q406.32 80.01 405.47 79.68Q404.62 79.36 403.61 79.12Q402.60 78.89 401.58 78.60Q400.56 78.32 399.71 77.86Q398.86 77.41 398.35 76.64Q397.83 75.87 397.83 74.64Q397.83 73.50 398.43 72.53Q399.04 71.57 400.29 70.98Q401.55 70.38 403.52 70.38Q404.83 70.38 406.11 70.75Q407.40 71.12 408.33 71.77L407.76 73.07Q406.78 72.41 405.67 72.09Q404.55 71.78 403.51 71.78Q402.11 71.78 401.20 72.16Q400.29 72.54 399.86 73.17Q399.44 73.80 399.44 74.59Q399.44 75.50 399.95 76.05Q400.47 76.60 401.32 76.92Q402.17 77.23 403.18 77.48Q404.20 77.72 405.22 78.00Q406.23 78.28 407.08 78.73Q407.92 79.18 408.44 79.94Q408.96 80.70 408.96 81.91Q408.96 83.04 408.34 84.01Q407.73 84.97 406.45 85.56Q405.17 86.14 403.20 86.14Z" style="fill:var(--muted)"/></svg></div>
+<div id="ui"><button id="rp">REPLAY</button><button id="th">LIGHT / DARK</button></div>
+<script>
+const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg',clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const q=(t,a,b)=>clamp((t-a)/(b-a)),ease=x=>1-Math.pow(1-x,3),back=x=>{const c=1.4;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)},D=Math.PI/180;
+const cx=128,dx=56*Math.cos(30*D),dy=28,T=12,PITCH=19,N=6,Y0=188,CY=170,RX=92,RY=22;
+const P=(pts,c=true)=>'M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join('L')+(c?'Z':'');
+const ytop=Y0-PITCH*(N-1),LIFT=34;
+/* tower wire (box outline) */
+$('wl').setAttribute('d',P([[cx-dx,ytop],[cx,ytop+dy],[cx,Y0+dy+T],[cx-dx,Y0+T]]));
+$('wr').setAttribute('d',P([[cx+dx,ytop],[cx,ytop+dy],[cx,Y0+dy+T],[cx+dx,Y0+T]]));
+const floors=[...Array(N)].map(()=>{const e=document.createElementNS(NS,'path');$('fl').appendChild(e);return e});
+const lidPts=l=>[[cx-dx,ytop-l],[cx,ytop-l-dy],[cx+dx,ytop-l],[cx,ytop-l+dy]];
+/* stroke layers made of round-cap segments so width can vary smoothly */
+function layer(n){return[...Array(n)].map(()=>{const f=document.createElementNS(NS,'line'),m=document.createElementNS(NS,'line');return{f,m,side:null}})}
+function paint(L,pts,wd,op){ // pts: [{x,y,front}], wd widths
+ L.forEach((g,i)=>{const A=pts[i],B=pts[i+1],on=A&&B&&wd[i]>.05;if(!on){g.f.style.display='none';g.m.style.display='none';return}
+  const front=(A.front+B.front)>=1,w=wd[i];g.f.style.display='';g.f.setAttribute('x1',A.x);g.f.setAttribute('y1',A.y);g.f.setAttribute('x2',B.x);g.f.setAttribute('y2',B.y);g.f.setAttribute('stroke-width',w);g.f.style.opacity=op;
+  const tgt=front?$('front'):$('back');if(g.f.parentNode!==tgt)tgt.insertBefore(g.f,tgt.firstChild);
+  if(front&&op>.02){g.m.style.display='';g.m.setAttribute('x1',A.x);g.m.setAttribute('y1',A.y);g.m.setAttribute('x2',B.x);g.m.setAttribute('y2',B.y);g.m.setAttribute('stroke-width',w+6);if(g.m.parentNode!==$('mk'))$('mk').appendChild(g.m)}else g.m.style.display='none'})}
+const ARC=layer(90),TRAIL=layer(120);
+const ep=ph=>({x:cx+RX*Math.cos(ph),y:CY+RY*Math.sin(ph),front:Math.sin(ph)>=0?1:0}); // ellipse point
+const SIG0=-0.052; // dot rest position on the (extended) arc, matches the static logo
+const arcPhi=s=>(-25+230*s)*D;
+let t0=performance.now(),last=0,frozen=null,speed=1,target=1,phase=0;
+const qs=new URLSearchParams(location.search);if(qs.has('t'))frozen=parseFloat(qs.get('t'));
+if(qs.has('clean'))$('ui').style.display='none';
+if(qs.has('transparent')){document.documentElement.style.background='transparent';document.body.style.background='transparent'}
+if(qs.get('theme')==='light')document.documentElement.dataset.theme='light';
+function render(t,dt){
+ /* 1 wireframe draws, 2 floors build, 3 roof lifts */
+ const o=ease(q(t,.1,1)),wf=1-q(t,1.1,1.8),da=o>=1?'none':'1';
+ for(const id of['wl','wr','lid']){const e=$(id);e.style.strokeDasharray=da;e.style.strokeDashoffset=1-o}
+ $('wl').style.opacity=$('wr').style.opacity=wf;
+ floors.forEach((e,i)=>{const k=ease(q(t,.95+.13*i,1.45+.13*i)),y=Y0-PITCH*i,yy=y+T*(1-k);e.setAttribute('d',k<=0?'':P([[cx-dx,yy],[cx,yy+dy],[cx+dx,yy],[cx+dx,y+T],[cx,y+dy+T],[cx-dx,y+T]]))});
+ const lk=q(t,1.9,2.7);$('lid').setAttribute('d',P(lidPts(LIFT*Math.max(0,back(lk)))));$('lid').style.strokeWidth=2.5+4.5*ease(lk);
+ /* 4 drone spirals up from the base, leaving a comet trail */
+ const tu=q(t,2.5,3.9),u=ease(tu),tr=[],tw=[];
+ for(let i=0;i<=120;i++){const v=i/120,phi=(-37-360*(1-v))*D,yc=CY+(212-CY)*(1-v);tr.push({x:cx+RX*Math.cos(phi),y:yc+RY*Math.sin(phi),front:Math.sin(phi)>=0?1:0});
+  const age=(u-v);tw.push(age<0||tu<=0?0:Math.max(0,1-age/.4)*(2+5*(1+Math.sin(phi))/2)*Math.min(1,v*20))}
+ paint(TRAIL,tr,tw,1-q(t,4.1,4.9));
+ const hi=Math.round(u*120),dpos=tu>0?tr[hi]:null,dphi=(-37-360*(1-u))*D;
+ /* 5 the orbit arc draws in, then the drone patrols it */
+ const ar=ease(q(t,4.0,5.0)),ap=[],aw=[];for(let i=0;i<=90;i++){const s=i/90;ap.push(ep(arcPhi(s)));aw.push(s<=ar?(1.2+9*Math.pow(Math.sin(Math.PI*s),1.1))*Math.min(1,(ar-s)*30+.001):0)}
+ paint(ARC,ap,aw,1);
+ let dp,dop=ease(q(t,2.5,2.8));const rest=ep(arcPhi(SIG0));
+ if(tu<1)dp=dpos||rest;
+ else if(t<4.9||(frozen!=null&&t>=20))dp=rest;
+ else{if(dt!=null){speed+=(target-speed)*Math.min(1,dt*4);phase+=dt*speed}else phase=t-4.9;const c=.5-.5*Math.cos(2*Math.PI*phase/8);dp=ep(arcPhi(SIG0+(1.05-SIG0)*c))}
+ for(const[id,show]of[['df',dp.front],['db',!dp.front]]){const e=$(id);e.setAttribute('cx',dp.x);e.setAttribute('cy',dp.y);e.style.opacity=show?dop:0;if(show){const g=$(id).parentNode;g.appendChild(e)}}
+ /* 6 wordmark */
+ const w=ease(q(t,3.4,4.4));$('wm').style.opacity=w;$('wm').style.transform=`translateY(${(1-w)*8}px)`;
+}
+function tick(now){const t=frozen!=null?frozen:(now-t0)/1000,dt=Math.min(.05,(now-last)/1000||0);last=now;render(t,frozen!=null?null:dt);if(frozen==null)requestAnimationFrame(tick)}
+if(matchMedia('(prefers-reduced-motion: reduce)').matches&&frozen==null)frozen=99;
+requestAnimationFrame(tick);
+const replay=()=>{if(qs.has('t'))return;const was=frozen==null;frozen=null;t0=performance.now();phase=0;if(!was||true)requestAnimationFrame(tick)};
+$('rp').onclick=replay;$('stage').onclick=replay;
+$('stage').onmouseenter=()=>target=3;$('stage').onmouseleave=()=>target=1;
+$('th').onclick=()=>{const r=document.documentElement;r.dataset.theme=r.dataset.theme==='light'?'dark':'light'};
+</script></body></html>

@@ -1,0 +1,21 @@
+{
+  "_note": "Fixed Structure and Sky Studios details. Fill each value once; empty strings leave the placeholder visible. Keys are placeholder text without brackets.",
+  "Legal entity name": "",
+  "Business address": "",
+  "email": "",
+  "phone": "",
+  "website": "",
+  "Tax / registration no.": "",
+  "Bank transfer / ACH / wire / other": "",
+  "Account holder": "",
+  "Bank name": "",
+  "Account no. / routing no.": "",
+  "1.5% per month": "",
+  "30": "",
+  "3": "",
+  "three (3)": "",
+  "ten (10)": "",
+  "State / Province, Country": "",
+  "binding arbitration / the courts": "",
+  "City, State / Province": ""
+}
